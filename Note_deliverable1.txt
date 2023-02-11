@@ -1,5 +1,5 @@
 For this Deliverable-1 we've have created deliverable-1 Branch and uploaded all the files in this branch.
-Document is uploded in the name of "TeamDeliverable-1.pdf"
+Document is uploded both doc and pdf format in the name of "TeamDeliverable-1.doc" and "TeamDeliverable-1.pdf"
 PowerPoint presentation file is "team resolve.pptx"
 Meeting minutes updated in the file "Meeting Minutes_1"
 README 
