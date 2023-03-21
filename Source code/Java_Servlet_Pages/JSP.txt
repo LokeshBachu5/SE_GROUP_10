@@ -1,0 +1,2 @@
+This folder contains all the Java servlet pages creted for the application.
+Here we are updating according to the completion of the application being developed .
