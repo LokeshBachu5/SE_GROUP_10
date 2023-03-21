@@ -1,0 +1,1 @@
+This folder consists all the style sheets worked in the project.
