@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Admin Main Page</title>
+<title>Admin Login Page</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/coin-slider.css" />
@@ -18,14 +18,45 @@
 	font-style: italic;
 	color: #000000;
 }
-.style4 {color: #FF00FF}
 -->
 </style>
+<style type="text/css">
+<!--
+.style2 {font-size: 24}
+.style6 {
+	color: #FF00FF;
+	font-weight: bold;
+	font-style: italic;
+}
+.style7 {color: #FF00FF}
+-->
+</style>
+<script language="javascript" type="text/javascript">      <!--Start Reg Validation Jai Siddalinga-->
+function valid()
+{
+var na3=document.s.adminid.value;
+if(na3=="")
+
+{
+alert("Please Enter User Name");
+document.s.adminid.focus();
+return false;
+}
+else
+{
+
+}
+var na4=document.s.pass.value;
+if(na4=="")
+
+{
+alert("Please Enter Password");
+document.s.pass.focus();
+return false;
+}
+}
+</script>
 </head>
-<%@ include file="connect.jsp" %>
-<%@ page import="java.util.Date,java.util.Calendar" %>
-<%@ page import="java.sql.*"%>
-<%@page import ="java.util.*,java.text.SimpleDateFormat,java.util.Date,java.io.FileInputStream,java.io.FileOutputStream,java.io.PrintStream"%>
 <body>
 <div class="main">
   <div class="header">
@@ -53,11 +84,32 @@
     <div class="content_resize">
       <div class="mainbar">
         <div class="article">
-          <h2><span class="style4">Wel-Come Admin</span></h2>
-          <p>&nbsp;</p>
-          <p><img src="images/User.jpg" width="620" height="464" /></p>
+           <h2 align="center"><span class="style7">ADMIN LOGIN</span></h2>
+           <p align="center"><img src="images/Alogin.png" width="209" height="118" /></p>
+           <form name="s" action="Authentication.jsp?value=<%="adminlogin"%>" method="post"  onSubmit="return valid()"  ons target="_top"> 
+			<P> </P> 
+  <div align="center">
+    <table border="0" width="48%" height="138">
+      <tr>
+        <td width="57%" height="25"><div align="left"><font color="#000000"><b><font size="5" face="Courier New, Courier, monospace">Admin Name:</font></b></font></div></td>
+        <td width="43%" height="25">
+  <input type="text"  name="adminid" size="15"></td>
+      </tr>
+      <tr>
+        <td width="57%" height="25"><div align="left"><font color="#000000"><b><font size="5" face="Courier New, Courier, monospace">Password:</font></b></font></div></td>
+        <td width="43%" height="25">
+  <input type="password"  name="pass" size="15"></td>
+      </tr>
+      <tr>
+        <td height="60" colspan="2">
+        <p align="center"><input type="submit"  value="Login" name="B1"><input type="reset" value="Reset" name="B2"></td>
+      </tr>
+    </table>
+    <p><a href="index.html"><font color="#FF3300" size="5"><strong>Home</strong></font></a></p>
+  </div>
+</form>
         </div>
-      </div>
+        </div>
       <div class="sidebar">
         <div class="searchform">
           <form id="formsearch" name="formsearch" method="post" action="#">
@@ -69,35 +121,25 @@
         </div>
         <div class="clr"></div>
         <div class="gadget">
-          <h2 class="star"><span class="style4">Admin Menu </span></h2>
+          <h2 class="star"><span>Sidebar</span> Menu</h2>
           <ul class="sb_menu style2">
-            <li><a href="A_AuthorizeUsers.jsp">View All Users And Authorize</a></li>
-			<li><a href="A_Android_users.jsp">View All Android Users</a></li>
-			
-			
-			
-            <li><a href="A_AllFrdReqResp.jsp">View Friend Request And Responses</a></li>
-			<li><a href="A_UnBlockReq.jsp">View All Unblock Request And Unblock</a></li>
-			<li><a href="A_AllUserAdvertise.jsp">View All Users Advertisement With Rank And Rating</a></li>
-			<li><a href="A_MalaciousFileUser.jsp">View All Malacious Users Details</a></li>
-			<li><a href="A_AllUserRecomend.jsp">View All Advertisement Recommended Users Details</a></li>
-			<li><a href="A_UserAdvReq.jsp">View Advertisement Request Users </a></li>
-			<li><a href="A_MalaciousAmtUser.jsp">View Malacious Publishers</a></li>
-			
-						<li><a href="A_View_Hidden_Attackers.jsp">View All Android Hidden Attackers</a></li>
-			<li><a href="A_ExpiredAdvertises.jsp">View All Expired Advertisement</a></li>
-			<li><a href="A_BlockedUsers.jsp">View All Blocked Users </a></li>
-			<li><a href="A_BlockEvidense.jsp">View All Blocked Users Evidence </a></li>
-			<li><a href="A_MalacNormUseChart.jsp">View User Type Count In Chart</a></li>
-			<li><a href="A_AdvChartDetail.jsp">View All Advertisement Ranks In Chart</a></li>
-			<li><a href="A_Login.jsp">LogOut</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="A_Login.jsp">Admin</a></li>
+            <li><a href="U_Login.jsp">User</a></li>
           </ul>
         </div>
       </div>
       <div class="clr"></div>
     </div>
   </div>
-  <div class="fbg"></div>
+  <div class="fbg">
+    <div class="fbg_resize">
+      <div class="col c1">
+        <h2><span>Image</span> Gallery</h2>
+        <a href="#"><img src="images/gal1.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="images/gal2.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="images/gal3.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="images/gal4.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="images/gal5.jpg" width="75" height="75" alt="" class="gal" /></a> <a href="#"><img src="images/gal6.jpg" width="75" height="75" alt="" class="gal" /></a> </div>
+      <div class="clr"></div>
+    </div>
+  </div>
   <div class="footer">
     <div class="footer_resize">
       <div style="clear:both;"><a href='http://all-free-download.com/free-website-templates/'></a></div>
